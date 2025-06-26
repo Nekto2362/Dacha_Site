@@ -1,0 +1,24 @@
+/*
+ * Стили для компонентов вкладки о базовом комплекте.
+ */
+.tab {
+  &__content {
+    @media(min-width: 768px) {
+      width: 55%;
+    }
+  }
+  &__list {
+    font-weight: 500;
+
+    p {
+      padding: 0.2rem 0;
+      border-bottom: 2px solid var(--shadow);
+    }
+
+    span {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+}
+

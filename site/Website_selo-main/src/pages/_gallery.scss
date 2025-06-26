@@ -1,0 +1,80 @@
+/*
+ * Стили для страницы "Галерея" и модального окна просмотра фотографий.
+ * Определяет сетку миниатюр, их эффекты при наведении и оформление модального окна с навигацией.
+ */
+
+.gallery {
+  .gallery__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  &__thumb {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover { transform: scale(1.05); }
+  }
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  &__content {
+    position: relative;
+    top: 5%;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  &__nav {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 1rem;
+    border-radius: 45%;
+    cursor: pointer;
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    top: 50%;
+  }
+  &__prev { transform: translateY(-50%) rotate(90deg); }
+  &__next { transform: translateY(-50%) rotate(-90deg); }
+
+  @media (min-width: 900px) {
+    &__prev { width: 3rem; left: -50px; }
+    &__next { width: 3rem; right: -50px; }
+  }
+
+  @media (max-width: 900px) {
+    &__nav { padding: 0.5rem; }
+    &__prev { left: 0; width: 2rem; }
+    &__next { right: 0; width: 2rem; }
+  }
+
+  &__open { overflow: hidden; }
+}
+
+

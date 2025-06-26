@@ -1,0 +1,82 @@
+/*
+ * Стили для компонента FilterByCategory.
+ */
+.documents__container {
+  display: flex;
+  margin-top: 2rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.filter {
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--shadow);
+
+  @media (max-width: 600px) {
+    position: static;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .radio-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    white-space: nowrap;
+    background-color: var(--bg);
+    cursor: pointer;
+    user-select: none;
+
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+
+      &:checked + .radio-circle {
+        border-color: var(--text);
+
+        &::after {
+          background-color: var(--text);
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .radio-circle {
+      position: relative;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 2px solid var(--text);
+      border-radius: 50%;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0.8rem;
+        width: 0.8rem;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+/*
+ * Стили страницы генерального плана.
+ */
+.master-plan {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 120px 3rem 0 3rem;
+
+  /* Стили для маленьких экранов (<= 600px):
+  уменьшаем горизонтальные отступы */
+  @media (max-width: 600px){
+    padding: 120px 1.5rem 0 1.5rem;
+  }
+
+  img {
+    margin-top: 2rem;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .dotted {
+    border-radius: 1rem;
+  }
+}

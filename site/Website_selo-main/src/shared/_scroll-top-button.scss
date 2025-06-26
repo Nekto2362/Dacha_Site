@@ -1,0 +1,29 @@
+/*
+ * Стили кнопки прокрутки.
+ */
+.scroll-top-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  background-color: var(--green);
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.1s ease;
+  z-index: 100;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+
+  &.visible {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}

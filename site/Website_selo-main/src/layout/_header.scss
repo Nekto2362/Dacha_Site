@@ -1,0 +1,137 @@
+/*
+ * Стили навигационной панели (шапки).
+ * Фиксируется вверху и центрируется по горизонтали.
+ */
+
+.navbar {
+  position: fixed;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 90%;
+  border-radius: 15rem;
+  background: var(--bg);
+  z-index: 1000;
+  box-shadow: 0 0 10px 2px var(--shadow);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      padding-right: 1.5rem;
+      height: 3em;
+    }
+  }
+
+  &__theme {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* Стили для экранов >= 1200px */
+@media (min-width: 1200px) {
+  .navbar {
+    transition: padding 0.5s ease;
+
+    h2, p { transition: font-size 0.2s linear; }
+
+    &_small {
+      padding: 1rem 2.3rem;
+      .navbar__logo img { height: 2rem; }
+      h2 { font-size: 1rem; }
+      p { font-size: 0.8rem; }
+    }
+
+    &__logo img { transition: height 0.3s ease;}
+
+    &_items {
+      display: flex;
+      margin-left: 1rem;
+    }
+
+    &__item {
+      margin-left: 0.5rem;
+      padding: 0.5rem;
+      white-space: nowrap;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+
+      &:hover { opacity: 1; }
+    }
+
+    &__theme {
+      height: 2rem;
+      margin-left: auto;
+      margin-right: 1rem;
+    }
+
+    &__menu { display: none; }
+  }
+}
+
+/* Стили для экранов < 1200px */
+@media (max-width: 1200px) {
+  .navbar {
+    &__items { display: none; }
+
+    &__theme {
+      height: 1.5rem;
+      margin-left: auto;
+      padding: 0 0.8rem;
+    }
+
+    &__menu {
+      position: relative;
+
+      img {
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+
+        &:hover { opacity: 1; }
+      }
+    }
+
+    &__dropdown {
+      position: absolute;
+      top: 150%;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      padding: .5rem 0;
+      background: var(--bg);
+      border-radius: .5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 1001;
+    }
+
+    &__dropdown-link {
+      padding: .5rem 1rem;
+      text-decoration: none;
+      font-size: .9rem;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+
+      &:hover { opacity: 1; }
+    }
+
+    &__dropdown-contacts {
+      display: flex;
+      flex-direction: column;
+      padding: .5rem 1rem;
+    }
+
+    &__contacts { display: none; }
+  }
+}

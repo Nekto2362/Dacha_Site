@@ -1,0 +1,93 @@
+$spacer: 1rem !default; // базовый шаг (1rem)
+$spacer-scale: 0.6 !default; // масштаб (каждый шаг — 0.25rem)
+
+// === margin ===
+@for $i from 0 through 5 {
+  .m-#{$i} {
+    margin: $i * $spacer * $spacer-scale;
+  }
+  .mt-#{$i} {
+    margin-top: $i * $spacer * $spacer-scale;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i * $spacer * $spacer-scale;
+  }
+  .ml-#{$i} {
+    margin-left: $i * $spacer * $spacer-scale;
+  }
+  .mr-#{$i} {
+    margin-right: $i * $spacer * $spacer-scale;
+  }
+  .mx-#{$i} {
+    margin-left: $i * $spacer * $spacer-scale;
+    margin-right: $i * $spacer * $spacer-scale;
+  }
+  .my-#{$i} {
+    margin-top: $i * $spacer * $spacer-scale;
+    margin-bottom: $i * $spacer * $spacer-scale;
+  }
+}
+
+.mr-auto { margin-right: auto !important; }
+.ml-auto { margin-left: auto !important; }
+
+// === padding ===
+@for $i from 0 through 5 {
+  .p-#{$i} {
+    padding: $i * $spacer * $spacer-scale;
+  }
+  .pt-#{$i} {
+    padding-top: $i * $spacer * $spacer-scale;
+  }
+  .pb-#{$i} {
+    padding-bottom: $i * $spacer * $spacer-scale;
+  }
+  .pl-#{$i} {
+    padding-left: $i * $spacer * $spacer-scale;
+  }
+  .pr-#{$i} {
+    padding-right: $i * $spacer * $spacer-scale;
+  }
+  .px-#{$i} {
+    padding-left: $i * $spacer * $spacer-scale;
+    padding-right: $i * $spacer * $spacer-scale;
+  }
+  .py-#{$i} {
+    padding-top: $i * $spacer * $spacer-scale;
+    padding-bottom: $i * $spacer * $spacer-scale;
+  }
+}
+
+
+
+// === flex ===
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow-1 { flex-grow: 1; }
+
+// === text ===
+.ta-center {text-align: center; }
+
+// === items ===
+.ji-center { justify-items: center; }
+.ai-center { align-items: center; }
+
+// === self ===
+.js-start { justify-self: start; }
+.as-start { align-self: start; }
+.js-end { justify-self: end; }
+.as-end { align-self: end; }
+.js-center { justify-self: center; }
+.as-center { align-self: center;  }
+
+.width-100 { width: 100%; }
+
+

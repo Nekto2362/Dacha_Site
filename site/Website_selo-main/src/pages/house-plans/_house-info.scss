@@ -1,0 +1,155 @@
+/*
+ * Стили страницы с информацией о плане дома.
+ */
+
+.house {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 120px;
+  width: 80%;
+
+  &__header {
+    position: relative;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  &__link-back {
+    position: absolute;
+    padding: 0 0.5rem;
+    border-radius: 50px;
+    color: var(--green);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--shadow);
+      opacity: 1;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 1rem;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    margin: 2rem 0;
+    border-bottom: 4px solid var(--shadow);
+  }
+
+  &__tab {
+    margin-bottom: -4px;
+    border-radius: 0 !important;
+    border-bottom: 4px solid var(--shadow);
+    font-size: 1.25rem;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: color 0.2s, opacity 0.2s;
+  }
+
+  &__tab_active {
+    border-color: #4078B0;
+    color: #4078B0FF;
+    opacity: 1;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+
+    &_title {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    &_caption {
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &__image {
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__link-back {
+      left: -5.5rem;
+      font-size: 3rem;
+    }
+
+    &__pricing {
+      text-align: end;
+    }
+
+    &__text_break {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__link-back {
+      font-size: 2rem;
+      bottom: 93%;
+      left: -0.5rem;
+    }
+
+    &__tabs {
+      gap: 1rem;
+      align-items: end;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__contacts {
+      position: fixed;
+      right: 2rem;
+      bottom: 6rem;
+      width: fit-content;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      background-color: var(--label);
+      opacity: 0.6;
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__contacts {
+      display: none;
+    }
+  }
+}

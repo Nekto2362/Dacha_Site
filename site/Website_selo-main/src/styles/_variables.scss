@@ -1,0 +1,38 @@
+/*
+ * Переменные для светлой и тёмной тем приложения.
+ *
+ * Переменные:
+ *   --bg             — фон страницы
+ *   --text           — цвет основного текста
+ *   --shadow         — основной цвет тени
+ *   --shadow-darker  — более насыщенный цвет тени
+ *   --h2             — цвет заголовков <h2>
+ *   --label          — цвет лейблов/h3
+ *   --highlight-text — цвет выделенного текста
+ *   --green          — дополнительный зелёный акцент
+ */
+
+[data-theme="light"] {
+  --bg: #fff;
+  --text: #000;
+  --shadow: #eeeeee;
+  --shadow-darker: #f0f0f0;
+
+  --h2: #ffcc85;
+  --label: #87b9ef;
+  --highlight-text: #FFC038;
+  --green: #aad133;
+}
+
+[data-theme="dark"] {
+  --bg: #262322;
+  --text: #fff;
+  --shadow: #3a3636;
+  --shadow-darker: #4b4545;
+
+  --h2: #ffa21f;
+  --label: #4078b0;
+  --highlight-text: #745e2e;;
+  --green: #566a19;
+}
+

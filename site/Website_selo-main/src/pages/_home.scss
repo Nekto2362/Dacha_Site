@@ -1,0 +1,33 @@
+/*
+ * Стили для блока оглавления (Table of Contents) на главной странице.
+ * Определяет оформление заголовка оглавления и стрелки для открытия/закрытия.
+ */
+
+.home {
+  .toc {
+    &__header {
+      display: flex;
+      align-items: center;
+    }
+
+    &__arrow {
+      height: 1.5rem;
+      margin-left: 1rem;
+      opacity: 0.7;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &_rotated {
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        height: 1rem;
+      }
+    }
+  }
+}
