@@ -189,6 +189,29 @@ footer img {
     width: 20px;
 }
 
+/* Добавьте эти стили в ваш файл style.css */
+
+/* Общие стили для заголовков секций */
+.section-title {
+    text-align: center; /* Выравнивание заголовков по центру */
+    font-size: 2em; /* Размер шрифта */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для контента изображений (одинаковый размер) */
+.image-content img {
+    width: 300px; /*  Фиксированная ширина изображений */
+    height: 200px; /* Фиксированная высота изображений */
+    object-fit: cover; /* Масштабирование с обрезкой для заполнения контейнера */
+    border-radius: 5px;
+}
+
+/* Стили для текста секций */
+.text-content p {
+    font-size: 1.1em; /* Размер шрифта */
+    line-height: 1.6; /* Межстрочный интервал */
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .location-content {
