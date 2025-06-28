@@ -249,6 +249,52 @@ footer img {
   display: none; /* Скрываем все элементы по умолчанию */
 }
 
+.content-item h1 {
+  background-color: #0d2847;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 0px 0;
+  font-size: 2em;
+  width: fit-content; /* Занимать столько места, сколько нужно для текста */
+}
+
+.content-item p {
+  font-weight: bold;
+  background-color: #84d4de;
+  color: #222;
+  padding: 8px 16px;
+  margin: 0px 0 5px;
+  font-size: 1.2em;
+  text-align: justify;
+  display: inline-block; /*  Возвращаем к inline-block */
+  width: fit-content; /* Занимать столько места, сколько нужно для текста */
+}
+
+.content-item ul {
+  list-style: none;
+  padding: 6px 12px; /* Внутренние отступы */
+  margin: 5px 0; /* Небольшой отступ сверху и снизу */
+  border-bottom: 1px solid white; /* Белая черточка снизу */
+  list-style: none; /* Убирает маркеры списка */
+  width: fit-content; /*  Подгоняет ширину под контент */
+  background-color: rgb(17, 0, 255, 0.2); /* Фон, где 0.5 - это начальная прозрачность */
+  position: relative; /* Создаем контекст позиционирования */
+  margin-bottom: 10px; /* Отступ между элементами */
+}
+
+.content-item li { 
+    font-size: 1em;
+  /*  Убираем стандартные стили списка */
+    list-style: none;
+    padding: 5px;
+    margin: 10px 0;
+      display: block; /* Делаем каждый li блочным элементом */
+    /*  Стили для прямоугольника */
+    padding-left: 10px; /* Отступ слева для списка */
+    z-index: 1; /* Поднимаем li над псевдоэлементом */
+}
+
 .content-item.active {
   display: block; /* Показываем активный элемент */
 }
