@@ -49,7 +49,7 @@
           <td>КП «Солнечная Поляна 2»</td>
           <td>2-65</td>
           <td>8.23</td>
-          <td><img src="../Images/house.jpg" alt="Галич №76" width="60"> ГАЛИЧ №76</td>
+          <td><img src="../Images/galich76.jpg" alt="Галич №76" width="60"> ГАЛИЧ №76</td>
           <td>135 м<sup>2</sup></td>
           <td>7 995 000 р.</td>
           <td>—</td>
@@ -58,13 +58,49 @@
     </table>
 
     <div class="buttons">
-      <button>Комплектация</button>
-      <button>Планировка</button>
-      <button>Работы</button>
+      <button data-content="komplekt">Комплектация</button>
+      <button data-content="plan">Планировка</button>
+      <button data-content="raboty">Работы</button>
     </div>
 
-    <div class="plans">
-      <img src="../Images/galich-plans.png" alt="План дома">
+    <div class="content">
+      <div class="content-item" id="plan">
+        <img src="../Images/galich-plans.png" alt="План дома">
+      </div>
+      <div class="content-item" id="komplekt" style="display: none;">
+        <h1>Дом из хуйни</h1>
+        <p>Комплектация включает в себя:</p>
+        <ul>
+          <li>Фундамент: монолитная плита</li>
+          <li>Стены: брус 200х200 мм</li>
+          <li>Кровля: мягкая черепица</li>
+          <li>Окна: ПВХ, двухкамерные стеклопакеты</li>
+          <li>Двери: входная металлическая, межкомнатные - филенчатые</li>
+          <li>Электрика: разводка по дому, розетки, выключатели</li>
+          <li>Отопление: электрические конвекторы</li>
+          <li>Водоснабжение: скважина, разводка по дому</li>
+          <li>Канализация: септик</li>
+        </ul>
+      </div>
+      <div class="content-item" id="raboty" style="display: none;">
+        <div class="raboty-item">
+          <img src="" alt="Доставка пиломатериалов" width="24">
+          <p>Доставка пиломатериалов</p>
+        </div>
+        <div class="raboty-item">
+          <img src="" alt="Разгрузка" width="24">
+          <p>Разгрузка</p>
+        </div>
+        <div class="raboty-item">
+          <img src="" alt="Сборка на участке" width="24">
+          <p>Сборка на участке заказчика</p>
+        </div>
+        <div class="raboty-item">
+          <img src="" alt="Доставка в МО" width="24">
+          <p>Доставка по Московской области</p>
+        </div>
+        <p>Сборка сруба производится на деревянных нагелях.  Стыки и углы бруса запиливаются в ласточкин хвост (тёплый угол).</p>
+      </div>
     </div>
   </main>
 
@@ -72,5 +108,7 @@
         <p>© Заповедное. Уникальный Дачный Поселок</p>
         <p><i class="bi bi-envelope"></i> zapovednoe17@mail.ru</p>
     </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

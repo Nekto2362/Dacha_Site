@@ -12,7 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 22, 49, 0.85); /* Добавляем синий фон */
+  background-color: #0d2847; /* Добавляем синий фон */
 }
 
 .logo {
@@ -29,15 +29,14 @@ header {
 }
 
 .logo h1 {
-  margin: 10px 0 0px; /* Отступы сверху и снизу */
-  font-size: 2em;
-  line-height: 1;
+  margin: 2px;
+  font-size: 28px;
 }
 
 .logo p {
-  margin: 0 0 5px; /* Отступы сверху и снизу */
-  font-size: 1.3em;
-  color: #2097a7; /*  Бирюзовый цвет для "Дачный поселок" */
+  margin: 2px;
+  font-size: 16px;
+  color: #84d4de;
 }
 
 .top-menu {
@@ -113,7 +112,6 @@ header {
 
 .breadcrumbs {
   margin: 20px 15px 10px;
-  
   font-size: 14px;
   color: #0f7c90;
 }
@@ -166,11 +164,45 @@ header {
   background: #08889e;
 }
 
+main {
+  flex: 1; /*  Растягиваем main, чтобы занять доступное пространство */
+}
+
+.buttons button {
+  background: #00a5bf;
+  color: white;
+  border: none;
+  padding: 13px 13px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: #08889e;
+}
+
+footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ffffff;
+}
+
+footer img {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 20px;
+}
+
+/* Price Table Styles - from previous answer */
 .price-table {
   width: 100%; /* Занимает всю доступную ширину контейнера */
   border-collapse: collapse; /* Убирает двойные границы между ячейками */
-  margin: 20px 30px; /* Отступы сверху и снизу, слева и справа */
-  margin-left: 15px; /* Отступ слева для выравнивания с другими элементами */
+  margin: 20px 15px; /* Отступы сверху и снизу, слева и справа */
   font-size: 14px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Легкая тень для выделения таблицы */
 }
@@ -208,36 +240,27 @@ header {
   }
 }
 
-main {
-  flex: 1; /*  Растягиваем main, чтобы занять доступное пространство */
+/* Styles for content display */
+.content {
+  margin: 20px 30px;
 }
 
-.buttons button {
-  background: #00a5bf;
-  color: white;
-  border: none;
-  padding: 13px 13px;
-  margin-left: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
+.content-item {
+  display: none; /* Скрываем все элементы по умолчанию */
 }
 
-.buttons button:hover {
-  background: #08889e;
+.content-item.active {
+  display: block; /* Показываем активный элемент */
 }
 
-footer {
-  width: 100%;
-  background-color: #000000;
-  padding: 30px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #ffffff;
+/* Styles for "Работы" section */
+.raboty-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-footer img {
-  vertical-align: middle;
-  margin-right: 5px;
-  width: 20px;
+.raboty-item img {
+  margin-right: 10px;
+  width: 24px; /* Adjust size as needed */
 }
